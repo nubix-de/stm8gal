@@ -19,7 +19,7 @@
 #define _SW_VERSION_H_
 
 /// 16b SW version identifier 
-#define VERSION     ((1<<14) | (3<<6) | (0<<1) | 1)     // -> v1.3.0
+#define VERSION     ((1<<14) | (3<<6) | (1<<1) | 0)     // -> v1.3.1b
 
 #endif // _SW_VERSION_H_
 
