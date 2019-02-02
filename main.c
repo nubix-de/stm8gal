@@ -2,8 +2,8 @@
    \file main.c
 
    \author G. Icking-Konert
-   \date 2018-12-14
-   \version 0.2
+   \date 2019-01-14
+   \version 0.3
    
    \brief implementation of main routine
    
@@ -1092,4 +1092,3 @@ int main(int argc, char ** argv) {
   return(0);
   
 } // main
-
