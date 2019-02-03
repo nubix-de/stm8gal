@@ -29,6 +29,11 @@
 Revision History
 ----------------
 
+v1.3.1b (2019-01-02)
+  - started v1.3.1b in branch develop
+
+----------------
+
 v1.3.0 (2019-01-02)
   - add multiple up- and downloads in single run
   - added option to print memory map and sector erase
