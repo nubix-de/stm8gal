@@ -217,7 +217,7 @@ void get_app_name(char *appFull, uint16_t versID, char *appName, char *versStr) 
   
   // copy version data to string
   if (status==0)
-    sprintf(versStr, "v%d.%d.%d beta", major, minor, build);
+    sprintf(versStr, "%d.%d.%d beta", major, minor, build);
   else
     sprintf(versStr, "%d.%d.%d", major, minor, build);
 

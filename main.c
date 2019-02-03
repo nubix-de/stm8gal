@@ -148,7 +148,7 @@ int main(int argc, char ** argv) {
 
   // get app name & version, and change console title
   get_app_name(argv[0], VERSION, appname, version);
-  sprintf(tmp, "%s (%s)", appname, version);
+  sprintf(tmp, "%s (v%s)", appname, version);
   setConsoleTitle(tmp);  
 
   
@@ -369,7 +369,7 @@ int main(int argc, char ** argv) {
   // on request (-h) or in case of parameter error print help page
   if ((printHelp==true) || (argc == 1)) {
     printf("\n");
-    printf("\n%s (%s)\n\n", appname, version);
+    printf("\n%s (v%s)\n\n", appname, version);
     printf("Program or read STM8 memory via built-in UART or SPI bootloader.\n");
     printf("For more information see https://github.com/gicking/stm8gal\n");
     printf("\n");
@@ -451,7 +451,7 @@ int main(int argc, char ** argv) {
   
   // print message
   if (verbose != MUTE)
-    printf("\n%s (%s)\n", appname, version);
+    printf("\n%s (v%s)\n", appname, version);
 
 
   ////////
