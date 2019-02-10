@@ -940,13 +940,15 @@ int main(int argc, char ** argv) {
       memset(imageBuf, 0, LENIMAGEBUF * sizeof(*imageBuf));
 
       // convert to memory image, depending on file type 
-      if (strstr(infile, ".s19") != NULL)   // Motorola S-record format
+      if ((strstr(infile, ".s19") != NULL) || (strstr(infile, ".S19") != NULL) || \
+          (strstr(infile, ".srec") != NULL) || (strstr(infile, ".SREC") != NULL))          // Motorola S-record format
         convert_s19(fileBuf, lenFile, imageBuf, verbose);
-      else if ((strstr(infile, ".hex") != NULL) || (strstr(infile, ".ihx") != NULL))   // Intel HEX-format
+      else if ((strstr(infile, ".hex") != NULL) || (strstr(infile, ".HEX") != NULL) || \
+               (strstr(infile, ".ihx") != NULL) || (strstr(infile, ".IHX") != NULL))       // Intel HEX-format
         convert_ihx(fileBuf, lenFile, imageBuf, verbose);
-      else if (strstr(infile, ".txt") != NULL)   // text table (Addr / Data)
+      else if ((strstr(infile, ".txt") != NULL) || (strstr(infile, ".TXT") != NULL))       // text table (Addr / Data)
         convert_txt(fileBuf, lenFile, imageBuf, verbose);
-      else if (strstr(infile, ".bin") != NULL)   // binary file
+      else if ((strstr(infile, ".bin") != NULL) || (strstr(infile, ".BIN") != NULL))       // binary file
         convert_bin(fileBuf, lenFile, addrStart, imageBuf, verbose);
       else
         Error("Input file %s has unsupported format (*.s19, *.hex, *.ihx, *.txt, *.bin)", infile);
