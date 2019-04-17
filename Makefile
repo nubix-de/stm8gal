@@ -18,8 +18,8 @@ RM            = rm -fr
 #SOURCES  += spi_spidev_comm.c
 
 # add optional GPIO reset via wiringPi library (Raspberry only) 
-#CFLAGS   += -DUSE_WIRING
-#LDFLAGS  += -lwiringPi
+CFLAGS   += -DUSE_WIRING
+LDFLAGS  += -lwiringPi
 
 
 .PHONY: clean all default objects

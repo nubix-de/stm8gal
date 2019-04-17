@@ -641,7 +641,7 @@ void set_port_attribute(HANDLE fpCom, uint32_t baudrate, uint32_t timeout, uint8
 
   // set term properties
   if (tcsetattr(fpCom, TCSANOW, &toptions) < 0)
-    Error("in 'set_port_attribute()': set port attributes failed");
+    Error("in 'set_port_attribute()': set port attributes failed with %d", errno);
   
   
   // set static RTS and DTR status (required for some multimeter optocouplers)

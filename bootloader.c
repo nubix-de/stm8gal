@@ -19,6 +19,11 @@
 #include "spi_Arduino_comm.h"
 #include "misc.h"
 
+#ifdef USE_WIRING
+  #include <wiringPi.h>
+#endif
+
+
 
 /**
   \fn uint8_t bsl_sync(HANDLE ptrPort, uint8_t physInterface, uint8_t verbose)

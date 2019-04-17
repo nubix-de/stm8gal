@@ -415,8 +415,7 @@ void setConsoleColor(uint8_t color) {
 
 } // setConsoleColor
 
-  
-  
+#ifndef USE_WIRING
 /**
   \fn uint64_t millis(void)
   
@@ -489,5 +488,7 @@ uint64_t micros() {
   return(microsCurr - s_microsStart);
 
 } // micros
+
+#endif // USE_WIRING
 
 // end of file
